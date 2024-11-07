@@ -1,0 +1,167 @@
+:root {
+  --DarkBlue: hsl(240, 38%, 20%);
+  --GrayishBlue: hsl(240, 18%, 77%);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-size: 1.5rem;
+  font-family: "Poppins", serif;
+  height: 100vh;
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+.headerImg {
+  padding: 0.8em;
+}
+
+.quoteImg {
+  height: 60px;
+  width: 60px;
+  margin: 0 auto;
+}
+
+.footerImg {
+  position: absolute;
+  bottom: 0;
+  overflow: hidden;
+  z-index: -99;
+}
+
+.footerImg > img {
+  transform: translateY(40px);
+}
+
+.headerContainer {
+  position: relative;
+  max-width: 490px;
+  margin: 0 auto;
+}
+
+.userImg {
+  height: 67%;
+  width: 67%;
+  position: absolute;
+  top: 14%;
+  left: 18%;
+}
+
+.userDescContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  text-align: center;
+  transform: translateY(-17%);
+}
+
+.userDescContainer > p {
+  color: var(--DarkBlue);
+  font-size: 1.05rem;
+  font-weight: 300;
+}
+
+.username {
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin-top: 1em;
+}
+
+.userDesig {
+  color: var(--GrayishBlue);
+  font-size: 0.9rem;
+}
+
+.slider {
+  position: absolute;
+  top: 80%;
+  left: 42%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  border-radius: 25px;
+  padding: 10px 12px;
+  width: 17%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.slider > img {
+  height: 12px;
+  width: 8px;
+}
+
+@media screen and (min-width: 970px) {
+  .main {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+
+  .leftContainer {
+    margin-left: 10%;
+    width: 45%;
+    transform: translate(15%, 8%);
+  }
+
+  .userDescContainer {
+    text-align: start;
+    align-items: flex-start;
+    overflow: visible;
+  }
+
+  .quoteImg {
+    margin-left: 15%;
+    height: 15%;
+    width: 15%;
+  }
+
+  .userDescContainer > div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 1em;
+  }
+
+  .userDescContainer > p {
+    font-size: 1.7rem;
+  }
+
+  .username {
+    margin: 0;
+    font-size: 1.3rem;
+    margin-right: 0.6em;
+  }
+
+  .userDesig {
+    font-size: 1.2rem;
+  }
+
+  .headerContainer {
+    max-width: 650px;
+    transform: translate(-15%, 0);
+  }
+
+  .userImg {
+    height: 72%;
+    width: 72%;
+    transform: translate(-8%, -2%);
+  }
+
+  .slider {
+    width: 10%;
+    top: 86%;
+    left: 20%;
+  }
+}
